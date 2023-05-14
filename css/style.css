@@ -1,0 +1,27 @@
+#before{
+    border: 1px solid red;
+    width: 226px;
+    height: 186px;
+    margin-left: 100px;
+}
+.text-wrapper{
+    display: flex;
+}
+.content-wrapper{
+    width: 226px;
+    line-height: 5px;
+}
+#theme{
+    border: 1px solid red;
+    width: 226px;
+    height: 21px;
+    margin-left: 100px; 
+}
+#input{
+    height: 21px;
+}
+#default{
+    font-size: 20px;
+    font-weight: bold;
+    
+}

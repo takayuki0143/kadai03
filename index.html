@@ -4,9 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>10枚メモ書き</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     
+    <h1>10枚メモ書き</h1>
+    <!-----タイマーの3分を表示------------------------------------------>
+    <p id="default">10:00</p>
+    <!-----スタートボタンを表示----------------------------------------->
+                <button id="start">スタート</button>
+    <!-----ストップボタンを表示----------------------------------------->
+                <button id="stop">ストップ</button>
+    <!-----リセットボタンを表示----------------------------------------->
+                <button id="reset">リセット</button>
+
+<!-----音声ファイル----------------------------------------->
+    <audio src="mp3/guide.mp3" id="sound_a"></audio>
+    <audio src="mp3/guide2.mp3" id="sounds_b"></audio>
+    <audio src="mp3/guide3.mp3" id="sounds_c"></audio>
+    <audio src="mp3/guide4.mp3" id="sounds_d"></audio>
+    <audio src="mp3/guide5.mp3" id="sounds_e"></audio>
+    <audio src="mp3/guide6.mp3" id="sounds_f"></audio>
+    <audio src="mp3/guide7.mp3" id="sounds_g"></audio>
+    <audio src="mp3/guide8.mp3" id="sounds_h"></audio>
+    <audio src="mp3/guide9.mp3" id="sounds_i"></audio>
+    <audio src="mp3/end.mp3" id="end"></audio>
+
+    <div class="text-wrapper">
+        <div class="content-wrapper">
+            <textarea id="input" class="input" cols="30" rows="10"></textarea>
+            <textarea id="content" class="content" cols="30" rows="10"></textarea>
+        </div>
+        <div class="before-wrapper">
+            <div id="theme"></div>
+            <div id="before"></div>
+        </div>
+    </div>
+    <div class="button">
+        <button id="send">送信</button>
+        <button class="tweet">ツイート</button>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
