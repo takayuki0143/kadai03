@@ -37,7 +37,7 @@
     margin-bottom: 30px;
 }
 .input{
-    height: 50px;
+    height: 20px;
     width: 500px;
     border: 2px solid #27acd9;
 }
@@ -61,7 +61,7 @@
 .memo{
     border: 2px solid #27acd9;
     width: 500px;
-    height: 50px;
+    height: 20px;
     margin-left: 200px; 
 }
 .mema{
@@ -110,3 +110,8 @@
 	color: #fff;
     margin-bottom: 100px;
 }
+
+/* 反映した先でも改行が使えるようにしたい */
+.before{
+    white-space: pre-wrap; /* 改行を維持するために必要 */
+  }
