@@ -310,7 +310,31 @@ $("#tweet").on("click",function(){
             localStorage.removeItem("content9");
             localStorage.removeItem("content10");
 
-            alert("削除しました");
+            // alert("削除しました");
             $("#input").val("");
             $("#content").val("");
+            $("#theme").empty();
+            $("#before").empty();
+
+
+            $("#a").empty();
+            $("#b").empty();
+            $("#c").empty();
+            $("#d").empty();
+            $("#e").empty();
+            $("#f").empty();
+            $("#g").empty();
+            $("#h").empty();
+            $("#i").empty();
+            $("#j").empty();
+            $("#k").empty();
+            $("#l").empty();
+            $("#m").empty();
+            $("#n").empty();
+            $("#o").empty();
+            $("#p").empty();
+            $("#q").empty();
+            $("#r").empty();
+            $("#s").empty();
+            $("#t").empty();
         });
