@@ -22,6 +22,91 @@ let r ="";
 let ss ="";
 let tt ="";
 
+//commandキーで送信
+$("#content").keydown(function (event) {
+    console.log(event);
+    if(event.keyCode == 91){
+        clickCount++;  // クリック回数をインクリメント
+    let click = clickCount;
+     //themeに表示されているものを削除
+    $("#theme").empty();
+    //beforeに表示されているものを削除
+    $("#before").empty();
+    
+    //inputのvalueを取得
+    const s = $("#input").val();
+     //contentのvalueを取得
+     const t = document.getElementById("content");
+     var text = t.value;
+     var html = text.replace(/\n/g, "<br>");
+     //クリックしたら要素を空に戻す
+    $("#input").val('');
+    $("#content").val("");
+     //表示させる
+     $("#theme").html(s);
+     var displayElement = document.querySelector("#before");
+     displayElement.innerHTML = html;
+ 
+     //localstorageに保存する
+     //回数別に区別したい…
+     localStorage.setItem("input"+click,s);
+     localStorage.setItem("content"+click,text);
+
+     //localstorageに保存した内容を取得したい
+     localStorage.getItem("input"+click); //Clickは1からスタート
+     localStorage.getItem("content"+click);
+ 
+    a = localStorage.getItem("input1"); //Clickは1からスタート
+    b = localStorage.getItem("content1");
+    c = localStorage.getItem("input2"); 
+    d = localStorage.getItem("content2");
+    e = localStorage.getItem("input3"); 
+    f = localStorage.getItem("content3");
+    g = localStorage.getItem("input4"); 
+    h = localStorage.getItem("content4");
+    i = localStorage.getItem("input5"); 
+    j = localStorage.getItem("content5");
+    k = localStorage.getItem("input6"); 
+    l = localStorage.getItem("content6");
+    m = localStorage.getItem("input7"); 
+    n = localStorage.getItem("content7");
+    o = localStorage.getItem("input8"); 
+    p = localStorage.getItem("content8");
+    q = localStorage.getItem("input9"); 
+    r = localStorage.getItem("content9");
+    ss = localStorage.getItem("input10"); 
+    tt = localStorage.getItem("content10");
+    console.log(a);
+    console.log(b);
+    
+    
+//過去ログに表示する
+$("#a").html(a);
+$("#b").html(b);
+$("#c").html(c);
+$("#d").html(d); 
+$("#e").html(e); 
+$("#f").html(f);  
+$("#g").html(g); 
+$("#h").html(h); 
+$("#i").html(i); 
+$("#j").html(j); 
+$("#k").html(k); 
+$("#l").html(l); 
+$("#m").html(m); 
+$("#n").html(n);
+$("#o").html(o);
+$("#p").html(p);
+$("#q").html(q);
+$("#r").html(r); 
+$("#s").html(ss); 
+$("#t").html(tt);
+    
+    }
+  });
+
+
+
 $("#send").on("click",function(){
     clickCount++;  // クリック回数をインクリメント
     let click = clickCount;
@@ -98,10 +183,6 @@ $("#q").html(q);
 $("#r").html(r); 
 $("#s").html(ss); 
 $("#t").html(tt);
-
-
-
-
 
 });
 
