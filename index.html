@@ -8,43 +8,109 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
-    <h1>10枚メモ書き</h1>
-    <!-----タイマーの3分を表示------------------------------------------>
-    <p id="default">10:00</p>
+    <div class="time-wrapper">
+    <div class="name">
+        <div class="ten">10枚メモ書き</div>
+    </div>
+            <div class="timeer">
     <!-----スタートボタンを表示----------------------------------------->
-                <button id="start">スタート</button>
+              <button class="button-css" id="start">スタート</button>
     <!-----ストップボタンを表示----------------------------------------->
-                <button id="stop">ストップ</button>
+                <button class="button-css" id="stop">ストップ</button>
     <!-----リセットボタンを表示----------------------------------------->
-                <button id="reset">リセット</button>
+                <button class="button-css" id="reset">リセット</button>
+            </div>
+    </div>
+      <!-----タイマーの3分を表示------------------------------------------>
+      <p id="default">10:00</p>
+
+    <div class="button">
+        <button class="button-css" id="send">送信</button>
+        <button class="button-css" id="tweet">ツイート</button>
+        <button class="button-css" id="clear">クリア</button>
+    </div>
 
 <!-----音声ファイル----------------------------------------->
     <audio src="mp3/guide.mp3" id="sound_a"></audio>
-    <audio src="mp3/guide2.mp3" id="sounds_b"></audio>
-    <audio src="mp3/guide3.mp3" id="sounds_c"></audio>
-    <audio src="mp3/guide4.mp3" id="sounds_d"></audio>
-    <audio src="mp3/guide5.mp3" id="sounds_e"></audio>
-    <audio src="mp3/guide6.mp3" id="sounds_f"></audio>
-    <audio src="mp3/guide7.mp3" id="sounds_g"></audio>
-    <audio src="mp3/guide8.mp3" id="sounds_h"></audio>
-    <audio src="mp3/guide9.mp3" id="sounds_i"></audio>
+    <audio src="mp3/guide2.mp3" id="sound_b"></audio>
+    <audio src="mp3/guide3.mp3" id="sound_c"></audio>
+    <audio src="mp3/guide4.mp3" id="sound_d"></audio>
+    <audio src="mp3/guide5.mp3" id="sound_e"></audio>
+    <audio src="mp3/guide6.mp3" id="sound_f"></audio>
+    <audio src="mp3/guide7.mp3" id="sound_g"></audio>
+    <audio src="mp3/guide8.mp3" id="sound_h"></audio>
+    <audio src="mp3/guide9.mp3" id="sound_i"></audio>
     <audio src="mp3/end.mp3" id="end"></audio>
 
-    <div class="text-wrapper">
+   <!-- input用のエリア -->
+   <div class="input-area">
         <div class="content-wrapper">
-            <textarea id="input" class="input" cols="30" rows="10"></textarea>
-            <textarea id="content" class="content" cols="30" rows="10"></textarea>
+            <div class="now">現在メモ</div>
+            <textarea id="input" class="input"></textarea>
+            <textarea id="content" class="content"></textarea>
         </div>
+
         <div class="before-wrapper">
-            <div id="theme"></div>
-            <div id="before"></div>
+            <div class="previous">1枚前メモ</div>
+            <div id="theme" class="memo"></div>
+            <div id="before" class="mema"></div>
         </div>
     </div>
-    <div class="button">
-        <button id="send">送信</button>
-        <button class="tweet">ツイート</button>
+<!-- 検証 -->
+
+<div class="total">メモ一覧</div>
+    <div class="text-wrapper">
+        <div class="before-wrapper">
+            <div id="s" class="theme"></div>
+            <div id="t" class="before"></div>
+        </div>
+
+        <div class="before-wrapper">
+            <div id="q" class="theme"></div>
+            <div id="r" class="before"></div>
+        </div>
+
+        <div class="before-wrapper">
+            <div id="o" class="theme"></div>
+            <div id="p" class="before"></div>
+        </div>
+
+        <div class="before-wrapper">
+            <div id="m" class="theme"></div>
+            <div id="n" class="before"></div>
+        </div>
+
+        <div class="before-wrapper">
+            <div id="k" class="theme"></div>
+            <div id="l" class="before"></div>
+        </div>
+
+        <div class="before-wrapper">
+            <div id="i" class="theme"></div>
+            <div id="j" class="before"></div>
+        </div>
+
+        <div class="before-wrapper">
+            <div id="g" class="theme"></div>
+            <div id="h" class="before"></div>
+        </div>
+
+        <div class="before-wrapper">
+            <div id="e" class="theme"></div>
+            <div id="f" class="before"></div>
+        </div>
+
+        <div class="before-wrapper">
+            <div id="c" class="theme"></div>
+            <div id="d" class="before"></div>
+        </div>
+
+        <div class="before-wrapper">
+            <div id="a" class="theme"></div>
+            <div id="b" class="before"></div>
+        </div>
     </div>
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="js/main.js"></script>
 </body>

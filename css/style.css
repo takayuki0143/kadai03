@@ -1,27 +1,110 @@
-#before{
-    border: 1px solid red;
-    width: 226px;
-    height: 186px;
-    margin-left: 100px;
+/* タイトルなど */
+
+.name{
+    font-size: 50px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 50px;
+    background-color: #27acd9;
 }
+.ten{
+    margin-left: 80px;
+}
+
+.timeer{
+    margin-left: 80px;
+}
+/* ボタン */
+#default{
+    font-size: 80px;
+    font-weight: bold;
+    margin-left: 80px;
+}
+.button{
+    margin-bottom: 100px;
+    margin-left: 80px;
+}
+
+/* テキスト記入欄 */
+.content-wrapper{
+    width: 500px;
+    margin-left:  80px;
+    margin-bottom: 10px;
+}
+.input-area{
+    display: flex;
+    margin-bottom: 200px;
+}
+.input{
+    height: 50px;
+    width: 500px;
+    border: 2px solid #27acd9;
+}
+.content{
+    height: 300px;
+    width: 500px;
+    border: 2px solid #27acd9;
+}
+.now{
+    background-color: #27acd9;
+    color: #fff;
+    width: 508px;
+}
+
+/* 1枚前の表示 */
+.previous{
+    margin-left: 200px; 
+    background-color: #27acd9;
+    color: #fff;
+}
+.memo{
+    border: 2px solid #27acd9;
+    width: 500px;
+    height: 50px;
+    margin-left: 200px; 
+}
+.mema{
+    border: 2px solid #27acd9;
+    width: 500px;
+    height: 300px;
+    margin-left: 200px;
+    margin-bottom: 50px;
+}
+
+/* 過去のメモ書き */
 .text-wrapper{
     display: flex;
+    flex-wrap: wrap; 
 }
-.content-wrapper{
-    width: 226px;
-    line-height: 5px;
+.total{
+    margin-left: 80px;
+    background-color: #27acd9;
+    color: #fff;
+    width: 254px;
 }
-#theme{
-    border: 1px solid red;
-    width: 226px;
+.theme{
+    width: 250px;
     height: 21px;
-    margin-left: 100px; 
+    margin-left: 80px; 
+    border: 2px solid #27acd9;
 }
-#input{
-    height: 21px;
+.before{
+    border: 2px solid #27acd9;
+    width: 250px;
+    height: 186px;
+    margin-left: 80px;
+    margin-bottom: 100px;
 }
-#default{
-    font-size: 20px;
-    font-weight: bold;
-    
+
+/* ボタンのCSS */
+.button-css {
+	text-decoration: none;
+	width: 200px;
+	margin: auto;
+	padding: 1rem 4rem;
+	font-weight: bold;
+	border-radius: 100vh;
+	border-bottom: 7px solid #0686b2;
+	background: #27acd9;
+	color: #fff;
 }

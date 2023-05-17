@@ -1,6 +1,31 @@
 const titles = [];
+var clickCount = 0;  // クリックした回数を保持する変数
+
+let a ="";
+let b ="";
+let c ="";
+let d ="";
+let e ="";
+let f ="";
+let g ="";
+let h ="";
+let i ="";
+let j ="";
+let k ="";
+let l ="";
+let m ="";
+let n ="";
+let o ="";
+let p ="";
+let q ="";
+let r ="";
+let ss ="";
+let tt ="";
+
 $("#send").on("click",function(){
-    //themeに表示されているものを削除
+    clickCount++;  // クリック回数をインクリメント
+    let click = clickCount;
+     //themeに表示されているものを削除
     $("#theme").empty();
     //beforeに表示されているものを削除
     $("#before").empty();
@@ -8,20 +33,81 @@ $("#send").on("click",function(){
     //inputのvalueを取得
     const s = $("#input").val();
      //contentのvalueを取得
-     const t = $("#content").val();
-     //クリックしたら空欄に戻す
-     $("#input").val('');
-     $("#content").val('');
-     console.log(s);
-     console.log(t);
+     const t = document.getElementById("content");
+     var text = t.value;
+     var html = text.replace(/\n/g, "<br>");
+     //クリックしたら要素を空に戻す
+    $("#input").val('');
+    $("#content").val("");
      //表示させる
      $("#theme").html(s);
-     $("#before").html(t);
+     var displayElement = document.querySelector("#before");
+     displayElement.innerHTML = html;
  
+     //localstorageに保存する
+     //回数別に区別したい…
+     localStorage.setItem("input"+click,s);
+     localStorage.setItem("content"+click,text);
+
+     //localstorageに保存した内容を取得したい
+     localStorage.getItem("input"+click); //Clickは1からスタート
+     localStorage.getItem("content"+click);
+ 
+    a = localStorage.getItem("input1"); //Clickは1からスタート
+    b = localStorage.getItem("content1");
+    c = localStorage.getItem("input2"); 
+    d = localStorage.getItem("content2");
+    e = localStorage.getItem("input3"); 
+    f = localStorage.getItem("content3");
+    g = localStorage.getItem("input4"); 
+    h = localStorage.getItem("content4");
+    i = localStorage.getItem("input5"); 
+    j = localStorage.getItem("content5");
+    k = localStorage.getItem("input6"); 
+    l = localStorage.getItem("content6");
+    m = localStorage.getItem("input7"); 
+    n = localStorage.getItem("content7");
+    o = localStorage.getItem("input8"); 
+    p = localStorage.getItem("content8");
+    q = localStorage.getItem("input9"); 
+    r = localStorage.getItem("content9");
+    ss = localStorage.getItem("input10"); 
+    tt = localStorage.getItem("content10");
+    console.log(a);
+    console.log(b);
+    
+    
+//過去ログに表示する
+$("#a").html(a);
+$("#b").html(b);
+$("#c").html(c);
+$("#d").html(d); 
+$("#e").html(e); 
+$("#f").html(f);  
+$("#g").html(g); 
+$("#h").html(h); 
+$("#i").html(i); 
+$("#j").html(j); 
+$("#k").html(k); 
+$("#l").html(l); 
+$("#m").html(m); 
+$("#n").html(n);
+$("#o").html(o);
+$("#p").html(p);
+$("#q").html(q);
+$("#r").html(r); 
+$("#s").html(ss); 
+$("#t").html(tt);
+
+
+
+
+
 });
 
+
 //結果をツイートできるようにしたい
-$(".tweet").on("click",function(){
+$("#tweet").on("click",function(){
     const theme = $("#input").val();
     const action = $("#content").val();
     const tweet ="https://twitter.com/intent/tweet?text="+encodeURIComponent(`メモ書きをしたよ!! \nテーマ：${theme} \nアクションプラン ：${action}`)+'&hashtags=今日のメモ書き';
@@ -31,16 +117,16 @@ $(".tweet").on("click",function(){
 
 //以下、タイマー部分は写経
 //001----------javascriptの開始--------------------------------------------------
-    window.onload= function(){
+    window.onload = function(){
 //002----------スタートボタンをクリックして発火--------------------------------------
-        let start = document.getElementById("start");
-        start.addEventListener("click",count_start,false);
+        var start = document.getElementById("start");
+        start.addEventListener("click",count_start, false);
 //003----------ストップボタンをクリックして発火--------------------------------------
-        let stop = document.getElementById("stop");
+        var stop = document.getElementById("stop");
         stop.addEventListener("click",count_stop,false);
 //004----------リセットボタンをクリックして発火--------------------------------------
 
-        let reset =document.getElementById("reset");
+        var reset =document.getElementById("reset");
         reset.addEventListener("click",count_reset,false);
     }
 //変数の定義---------------------------------------------------------------------
@@ -84,12 +170,13 @@ $(".tweet").on("click",function(){
         }
         if(count === 60){
             sound_i.play(); //9分経過のアナウンス
+            $("#input").html("アクションプラン");//アクションプランを考えられるように誘導
         }
         if(count ===1){
             end.play(); //終了のアナウンス
             var display = document.getElementById('default');
             display.style.color = "red";
-            display.innerHTML = "時間です！"
+            display.innerHTML = "終了です。"
             //音源を鳴らせるようにしたい
             
             clearInterval(interval);
@@ -118,3 +205,31 @@ $(".tweet").on("click",function(){
             count_down.innerHTML= "10:00";
         }
 
+
+        $("#clear").on("click",function(){
+            localStorage.removeItem("input1");
+            localStorage.removeItem("input2");
+            localStorage.removeItem("input3");
+            localStorage.removeItem("input4");
+            localStorage.removeItem("input5");
+            localStorage.removeItem("input6");
+            localStorage.removeItem("input7");
+            localStorage.removeItem("input8");
+            localStorage.removeItem("input9");
+            localStorage.removeItem("input10");
+            
+            localStorage.removeItem("content1");
+            localStorage.removeItem("content2");
+            localStorage.removeItem("content3");
+            localStorage.removeItem("content4");
+            localStorage.removeItem("content5");
+            localStorage.removeItem("content6");
+            localStorage.removeItem("content7");
+            localStorage.removeItem("content8");
+            localStorage.removeItem("content9");
+            localStorage.removeItem("content10");
+
+            alert("削除しました");
+            $("#input").val("");
+            $("#content").val("");
+        });
